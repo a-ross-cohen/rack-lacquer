@@ -1,6 +1,6 @@
 # Rack::Lacquer
 
-TODO: Write a gem description
+This middleware parses the entire response body, so its not very fast, but it is very effective. This is a great way to simulate Varnish or another ESI layer in development mode.
 
 ## Installation
 
@@ -18,7 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In your rails environment file, add the following:
+
+``` ruby
+config.middleware.insert_before ActionDispatch::Static, Rack::Lacquer
+```
 
 ## Contributing
 
