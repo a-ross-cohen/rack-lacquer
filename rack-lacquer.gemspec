@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "rack-lacquer"
-  spec.version       = '0.0.1'
+  spec.version       = '0.0.2'
   spec.authors       = ["Adam Ross Cohen"]
   spec.email         = ["a.ross.cohen@gmail.com"]
   spec.description   = %q{Ruby driven ESI for non-production environments}
