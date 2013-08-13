@@ -7,7 +7,7 @@ module Rack
 
     def call env
       status, headers, response = @app.call env
-      response.map! { |part| process_includes part, env } if headers['Content-Type'] =~ /text\/html/ && response.respond_to?( :map! )
+      response.map! { |part| process_includes part, env } if headers['Content-Type'] =~ /text\/html/ && response.respond_to?( :map! ) && status == 200
       [status, headers, response]
     end
     
