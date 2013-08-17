@@ -18,11 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-In your rails environment file, add the following:
+In your rails development environment file, add the following:
 
 ``` ruby
 config.middleware.insert_before ActionDispatch::Static, Rack::Lacquer
+config.threadsafe!
 ```
+This inserts Rack::Lacquer as the first middleware in the stack. We run in threadsafe mode to prevent recursive locking from Rack::Lock
 
 ## Contributing
 
